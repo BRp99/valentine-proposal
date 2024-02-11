@@ -6,8 +6,8 @@
 
 .yes,
 .no {
-  height: 30px;
-  width: 50px;
+  min-height: 2rem;
+  min-width: 50px;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;

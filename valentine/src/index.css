@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --beige_color: #f5f5dc;
+  --cornsilk: #fff8dc;
+  --peachpuff: #ffdab9;
+  --navajowhite: #ffdead;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--beige_color);
+}
+
+::selection {
+  background-color: var(--navajowhite);
+}

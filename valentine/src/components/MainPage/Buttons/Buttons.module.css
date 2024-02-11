@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.yes,
+.no {
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.yes {
+  background-color: var(--peachpuff);
+}
+
+.no {
+  background-color: var(--navajowhite);
+}
+
+button:active {
+  top: 4px;
+  box-shadow: #e74c3c 0px 3px 2px, #000 0px 3px 5px;
+}

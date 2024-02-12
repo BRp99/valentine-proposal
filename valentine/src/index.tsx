@@ -1,8 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
+import ReactGA from "react-ga"
 import App from "./components/App/App"
 import reportWebVitals from "./reportWebVitals"
+
+ReactGA.initialize("427371987")
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(

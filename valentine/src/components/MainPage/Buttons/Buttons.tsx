@@ -1,5 +1,10 @@
 import styles from "./Buttons.module.css"
 import { useState } from "react"
+import ReactGA from "react-ga"
+
+interface Props {
+  onYesClick: () => void
+}
 
 const messages = [
   "No",
@@ -14,18 +19,26 @@ const messages = [
   "Just Kidding, PLEASE!",
 ]
 
-export default function Buttons() {
+export default function Buttons({ onYesClick }: Props) {
   const [isNoButtonVisible, setIsNoButtonVisible] = useState(true)
-
   const [yesButtonSize, setYesButtonSize] = useState(15)
-
   const [messageIndex, setMessageIndex] = useState(0)
 
   const handleYesClick = () => {
+    ReactGA.event({
+      category: "Button Click",
+      action: "Yes",
+    })
     setIsNoButtonVisible(false)
   }
 
   const handleNoClick = () => {
+    ReactGA.event({
+      category: "Button Click",
+      action: "No",
+      label: messages[messageIndex],
+    })
+
     setYesButtonSize(yesButtonSize + 25)
 
     setMessageIndex((prevIndex) => (prevIndex + 1) % messages.length)
@@ -33,7 +46,14 @@ export default function Buttons() {
 
   return (
     <div className={styles.container}>
-      <button className={styles.yes} style={{ fontSize: `${yesButtonSize}px` }} onClick={handleYesClick}>
+      <button
+        className={styles.yes}
+        style={{ fontSize: `${yesButtonSize}px` }}
+        onClick={() => {
+          onYesClick()
+          handleYesClick()
+        }}
+      >
         Yes
       </button>
 

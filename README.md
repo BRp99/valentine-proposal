@@ -15,7 +15,7 @@ In this project I take advantage of the arrival of Valentine's Day to create a p
 - HTML
 - CSS
   
-  knew:
+  new:
 - Google Analytics
 
 ## Additional information

@@ -4,6 +4,7 @@
 }
 
 .title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--coral);
   letter-spacing: 1px;
 }
@@ -36,4 +37,13 @@
   gap: 4rem;
   font-size: 1.3rem;
   color: var(--coral);
+}
+
+/* MEDIA QUERIES */
+
+@media (width < 430px) {
+  .watch,
+  .watch_informations {
+    gap: 3rem;
+  }
 }

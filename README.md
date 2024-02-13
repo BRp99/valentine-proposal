@@ -1,6 +1,6 @@
 # Valentine Proposal
 
-Welcome to my valentine-proposal project!
+Welcome to my Valentine Proposal project!
 In this project I take advantage of the arrival of Valentine's Day to create a page where I can share this project with my friends and they send it to their valentines.
 
 ## Goal

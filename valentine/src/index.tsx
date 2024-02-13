@@ -5,7 +5,7 @@ import ReactGA from "react-ga"
 import App from "./components/App/App"
 import reportWebVitals from "./reportWebVitals"
 
-ReactGA.initialize("427371987")
+ReactGA.initialize("UA-302368815-1")
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(

@@ -45,7 +45,7 @@ export default function App() {
         <MainPage />
       ) : (
         <div className={styles.container_countdown}>
-          <h1 className={styles.title}> Valentine Proposal Project</h1>
+          <h1 className={styles.title}> Valentine Proposal</h1>
           <div className={styles.watch}>
             <div>{timeRemaining.hours}</div>
 

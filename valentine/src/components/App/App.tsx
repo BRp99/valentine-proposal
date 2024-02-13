@@ -8,7 +8,7 @@ export default function App() {
 
   useEffect(() => {
     const currentDate = new Date()
-    const targetDate = new Date("2024-02-13T15:35:00")
+    const targetDate = new Date("2024-02-13T24:00:00")
 
     if (currentDate >= targetDate) {
       setShowProject(true)

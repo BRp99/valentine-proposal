@@ -14,6 +14,7 @@ In this project I take advantage of the arrival of Valentine's Day to create a p
 - Typescript
 - HTML
 - CSS
+  
   knew:
 - Google Analytics
 - Django

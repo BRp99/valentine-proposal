@@ -1,7 +1,10 @@
 # Valentine Proposal
 
 Welcome to my Valentine Proposal project!
-In this project I take advantage of the arrival of Valentine's Day to create a page where I can share this project with my friends and they send it to their valentines.
+In this project I take advantage of the arrival of Valentine's Day to create a simple page where I can share this project with my friends and they send it to their valentines.
+Depending on the answer, things will happen to one of the buttons 🤪🤪
+
+![Image 1](./public/valentine.png)
 
 ## Goal
 - Learn how to use the Google Analytics tool to understand user behavior, to personalize the user experience (UX);

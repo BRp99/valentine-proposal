@@ -11,10 +11,14 @@ export default function MainPage() {
   const [isNoButtonVisible, setIsNoButtonVisible] = useState(true)
   const [yesButtonSize, setYesButtonSize] = useState(15)
   const [messageIndex, setMessageIndex] = useState(0)
+  const [showPhrase, setShowPhrase] = useState(true)
+  const [showYesButton, setShowYesButton] = useState(true)
 
   const handleYesClick = () => {
     setShowSecondImage(true)
     setShowTryAgainButton(true)
+    setShowPhrase(false)
+    setShowYesButton(false)
   }
 
   const handleTryAgainClick = () => {
@@ -23,6 +27,8 @@ export default function MainPage() {
     setIsNoButtonVisible(true)
     setYesButtonSize(15)
     setMessageIndex(0)
+    setShowPhrase(true)
+    setShowYesButton(true)
   }
 
   useEffect(() => {
@@ -44,16 +50,18 @@ export default function MainPage() {
   return (
     <div className={styles.container}>
       <BearAlone showSecondImage={showSecondImage} />
-      <Phrase />
-      <Buttons
-        onYesClick={handleYesClick}
-        isNoButtonVisible={isNoButtonVisible}
-        yesButtonSize={yesButtonSize}
-        messageIndex={messageIndex}
-        setIsNoButtonVisible={setIsNoButtonVisible}
-        setYesButtonSize={setYesButtonSize}
-        setMessageIndex={setMessageIndex}
-      />
+      {showPhrase && <Phrase />}
+      {showYesButton && (
+        <Buttons
+          onYesClick={handleYesClick}
+          isNoButtonVisible={isNoButtonVisible}
+          yesButtonSize={yesButtonSize}
+          messageIndex={messageIndex}
+          setIsNoButtonVisible={setIsNoButtonVisible}
+          setYesButtonSize={setYesButtonSize}
+          setMessageIndex={setMessageIndex}
+        />
+      )}
       {showTryAgainButton && (
         <button className={styles.tryAgain} onClick={handleTryAgainClick}>
           Try Again

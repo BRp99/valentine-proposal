@@ -1,41 +1,50 @@
-import styles from "./Buttons.module.css"
-import { useState } from "react"
-import ReactGA from "react-ga"
+import styles from './Buttons.module.css'
+import ReactGA from 'react-ga'
 
 interface Props {
   onYesClick: () => void
+  isNoButtonVisible: boolean
+  yesButtonSize: number
+  messageIndex: number
+  setIsNoButtonVisible: (state: boolean) => void
+  setYesButtonSize: (size: number) => void
+  setMessageIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
 const messages = [
-  "No",
-  "Are you sure?",
-  "Really sure?",
-  "Really really really sure?",
-  "Just think about it!",
-  "Are you positive?",
+  'No',
+  'Are you sure?',
+  'Really sure?',
+  'Really really really sure?',
+  'Just think about it!',
+  'Are you positive?',
   "If you say no I'll be very very sad",
-  "Really very very sad",
+  'Really very very sad',
   "Ok fine! I'll stop asking...",
-  "Just Kidding, PLEASE!",
+  'Just Kidding, PLEASE!',
 ]
 
-export default function Buttons({ onYesClick }: Props) {
-  const [isNoButtonVisible, setIsNoButtonVisible] = useState(true)
-  const [yesButtonSize, setYesButtonSize] = useState(15)
-  const [messageIndex, setMessageIndex] = useState(0)
-
+export default function Buttons({
+  onYesClick,
+  isNoButtonVisible,
+  yesButtonSize,
+  messageIndex,
+  setIsNoButtonVisible,
+  setYesButtonSize,
+  setMessageIndex,
+}: Props) {
   const handleYesClick = () => {
     ReactGA.event({
-      category: "Button Click",
-      action: "Yes",
+      category: 'Button Click',
+      action: 'Yes',
     })
     setIsNoButtonVisible(false)
   }
 
   const handleNoClick = () => {
     ReactGA.event({
-      category: "Button Click",
-      action: "No",
+      category: 'Button Click',
+      action: 'No',
       label: messages[messageIndex],
     })
 

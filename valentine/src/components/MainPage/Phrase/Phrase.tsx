@@ -1,4 +1,4 @@
-import styles from "./Phrase.module.css"
+import styles from './Phrase.module.css'
 
 export default function Phrase() {
   return (

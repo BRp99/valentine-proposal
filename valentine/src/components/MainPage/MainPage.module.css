@@ -6,3 +6,16 @@
 .container > * {
   margin-top: 3rem;
 }
+
+.tryAgain {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f5a623;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tryAgain:hover {
+  background-color: #d88c1f;
+}

@@ -1,0 +1,6 @@
+@media (max-width: 330px) {
+  .phrase {
+    font-size: clamp(1.3rem, 5vw, 1.5rem);
+    text-align: center;
+  }
+}

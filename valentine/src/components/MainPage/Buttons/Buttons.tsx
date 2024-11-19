@@ -18,10 +18,9 @@ const messages = [
   'Really really really sure?',
   'Just think about it!',
   'Are you positive?',
-  "If you say no I'll be very very sad",
+  "If you say no I'll be very sad",
   'Really very very sad',
   "Ok fine! I'll stop asking...",
-  'Just Kidding, PLEASE!',
 ]
 
 export default function Buttons({
@@ -33,6 +32,10 @@ export default function Buttons({
   setYesButtonSize,
   setMessageIndex,
 }: Props) {
+  const resetSizes = () => {
+    setYesButtonSize(15)
+  }
+
   const handleYesClick = () => {
     ReactGA.event({
       category: 'Button Click',
@@ -48,7 +51,13 @@ export default function Buttons({
       label: messages[messageIndex],
     })
 
-    setYesButtonSize(yesButtonSize + 25)
+    const resetPoints = ['Really sure?', 'Just think about it!', "If you say no I'll be very sad", "Ok fine! I'll stop asking..."]
+
+    if (resetPoints.includes(messages[messageIndex])) {
+      resetSizes()
+    } else {
+      setYesButtonSize(yesButtonSize + 25)
+    }
 
     setMessageIndex((prevIndex) => (prevIndex + 1) % messages.length)
   }

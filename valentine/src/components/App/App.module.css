@@ -39,8 +39,6 @@
   color: var(--coral);
 }
 
-/* MEDIA QUERIES */
-
 @media (width < 430px) {
   .watch,
   .watch_informations {

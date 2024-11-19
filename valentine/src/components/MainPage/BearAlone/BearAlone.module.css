@@ -1,4 +1,12 @@
 .image {
   height: 200px;
   border-radius: 50%;
+  width: auto;
+}
+
+@media (max-width: 330px) {
+  .image {
+    max-width: 80%;
+    height: auto;
+  }
 }
